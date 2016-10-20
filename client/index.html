@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <audio id="spawn_cell" src="audio/split.mp3"></audio>
     <meta charset="UTF-8">
-    <title>Your Game</title>
+    <title>HeadSoccer Online</title>
 
     <link rel="stylesheet" href="/css/main.css" />
 </head>
@@ -12,11 +13,17 @@
     </div>
     <div id="startMenuWrapper">
         <div id="startMenu">
-            <p>Head Soccer Online</p>
+            <p>Head Soccer Online 2</p>
             <input type="text" tabindex="0" autofocus placeholder="NickName" id="playerNameInput" />
             <b class="input-error">Nick name must be alphanumeric characters only!</b>
             <br />
-            <button id="startButton">Play</button>
+            <a onclick="document.getElementById('spawn_cell').play();"> <button id="startButton">Play</button></a>
+            <div id="instructions">
+                <h3>Gameplay</h3>
+                <ul>
+                    <li>Move your keys to move your character</li>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
